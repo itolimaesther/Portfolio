@@ -5,6 +5,8 @@ import { Helmet as Head } from "react-helmet";
 import '../sass/main.scss';
 
 
+
+
 const navList = [
   { nav: "/", label: "welcome" },
   { nav: "/about", label: "about" },
