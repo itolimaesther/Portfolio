@@ -15,7 +15,7 @@ const navList = [
 ]
 
 const onPage = (id, navUrl) => {
-  let pageId = id.replace("-page", "")
+  let pageId = id.replace("page", "")
   let route = navUrl.replace("/", "")
 
   if (route === "") {

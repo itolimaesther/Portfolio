@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `My Portfolio Site`,
+    description: `My portfolio site to displays all my works and my activities`,
+    author: `@esther`,
+    twitterUsername: "@Ur_melanin_dev",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,14 +15,6 @@ module.exports = {
             debug: true,
           },
         },
-      },
-    },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `lxmke4p4wja9`,
-        accessToken: 'ItjRzdBODAWrnjMdlQ93BA0iBMEnsjnZz866_RHtbu8',
-        host: `preview.contentful.com`,
       },
     },
     {
@@ -48,5 +41,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify-cms`,
   ],
 }

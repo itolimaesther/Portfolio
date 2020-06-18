@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const AboutItems = ({ headshot }) => {
   return (
     <div className="about-content">
@@ -16,3 +17,4 @@ const AboutItems = ({ headshot }) => {
 };
 
 export default AboutItems;
+

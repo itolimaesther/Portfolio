@@ -47,10 +47,12 @@
         .grid--title{
             font-size: $biggest-font-size;
             margin-bottom: 0;
+            color: $color-white;
         }
         .grid-intro{
             line-height: 1.5rem;
             letter-spacing: 1.5px;
+            color: $color-white;
         }
 
         // about page styles
@@ -221,7 +223,7 @@
             display: block;
           }
           .u-margin-top-medium {
-            margin-top: -3rem !important;
+            margin-top: 2rem !important;
           }
 
 

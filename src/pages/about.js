@@ -1,6 +1,6 @@
-import React from "react";
-import AboutItems from "../components/AboutItems";
-import Image1 from "./../images/img1.png";
+import React from "react"
+import AboutItems from "../components/AboutItems"
+import Image1 from "./../images/img1.png"
 import MainLayout from "../layouts/MainLayout"
 
 const About = () => {
@@ -32,7 +32,8 @@ const About = () => {
         </div>
       </div>
     </MainLayout>
-  );
-};
+  )
+}
 
 export default About;
+
