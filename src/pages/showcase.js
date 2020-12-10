@@ -10,27 +10,52 @@ import img4 from "../images/webflow.png"
 const thumbnailData = [
   {
     img: img,
-    title: "Melineo Calculator",
+    id: 1,
     description:
-      "Melineo calculator is a solar calculator that calculates the power you need for your appliances in the house. ",
+      "Website for a banking industry.",
+    technologies: [
+      'HTML',
+      'CSS',
+      'JavaScript'
+    ],
+    link: "https://www.avacapitalgroup.com/",
+    
   },
   {
     img: img2,
-    title: "2Melineo Calculator2",
+    id: 2,
     description:
-      "2Melineo calculator is a solar calculator that calculates the power you need for your appliances in the house. ",
+      "Website for a creative company.",
+      technologies: [
+        'HTML',
+        'CSS',
+        'JQuery'
+      ],
+      link: "http://swank-creations.com/",  
   },
   {
     img: img3,
-    title: "3Melineo Calculator",
+    id: 3,
     description:
-      "3Melineo calculator is a solar calculator that calculates the power you need for your appliances in the house. ",
+      "Solar enery app. Calculates the amount of power needed for your appliaances.",
+      technologies: [
+        'HTML',
+        'CSS',
+        'React'
+      ],
+      link: "https://melinoe-solar-calculator.netlify.app/",
   },
   {
     img: img4,
-    title: "3Melineo Calculator",
+    id: 4,
     description:
       "3Melineo calculator is a solar calculator that calculates the power you need for your appliances in the house. ",
+      technologies: [
+        'HTML',
+        'CSS',
+        'JavaScript'
+      ],
+    link: "#",
   },
 ]
 
@@ -49,9 +74,10 @@ const Showcase = () => {
       {thumbnailData.map(data => (
         <Thumbnail
           image={data.img}
-          title={data.title}
           description={data.description}
-          key={`pt-${data.title.replace(/\s+/, '').toLocaleLowerCase()}`}
+          technologies={data.technologies}
+          link={data.link}
+          key={data.id}
         />
       ))}
     </MainLayout>

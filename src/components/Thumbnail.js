@@ -2,7 +2,11 @@ import React from 'react'; // Import the Component component from React
 
 
 
-function Thumbnail({image,title,description}) {
+
+function Thumbnail({image,technologies,description, link}) {
+
+    const techItems = technologies.map((list) => <li className="technologies-list"> {list} </li>)
+
     return (
         <div  className="showcase w-80" data-target="showcase">
         <div className="showcase1 row">
@@ -12,13 +16,17 @@ function Thumbnail({image,title,description}) {
             </div>
             
             <div className="col-6">
-                <div>
-
-                <h3 className="h3 project-title">{title}</h3>
+                <div className="col-right">
                 <p className="showcase__description project-description">
                     {description}
                 </p>
-                {/* <p className="color-gray">Lorem ipsum</p> */}
+                <ul className="technologies">
+                    {techItems}
+                </ul>
+
+                <div className="u-margin-top-small">
+                    <a className="live" href={`${link}`} target="_blank" rel="noopener noreferrer" >Live</a>
+                </div>
 
                 </div>
             </div>

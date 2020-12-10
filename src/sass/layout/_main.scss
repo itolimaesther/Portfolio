@@ -95,6 +95,19 @@
         .h3, p{
           color: $color-primary;
         }
+
+        .col-right{
+          display: flex;
+          width: 100%; 
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .live{
+            color: $color-primary;
+            text-decoration: underline;
+          }
+        }
       }
     }
 
@@ -322,6 +335,22 @@
 .git-link{
   color: $color-primary;
   text-decoration: underline;
+}
+
+.technologies{
+  display: flex;
+  margin-top: 20px;
+  width: 80%;
+  justify-content: center;
+}
+
+.technologies-list{
+  color: $color-white;
+  font-size: $xx-small-font-size;
+  background-color: $color-primary-light;
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 12px;
 }
 
 

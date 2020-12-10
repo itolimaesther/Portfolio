@@ -10,7 +10,7 @@ const Welcome = () => {
           <WelcomeItems
             greet = "Hi, I'm Esther."
             stack="Front-End Developer"
-            introduction="I'm focused on creating a seamless digital products that is mobile-friendly, accessible and with great user-experience"
+            introduction="I create seamless digital products that is mobile-friendly, accessible and with great user-experience."
           />
         </div>
         <div className="l-grid-right">

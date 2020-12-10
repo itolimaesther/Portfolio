@@ -26,8 +26,10 @@ const Talks = () => {
       id="talks"
       className=" main-content u-padding-left-small u-padding-right-small u-margin-top-medium"
     >
-      <div className="talks-header u-center-text text-color-primary">
+      <div className="talks-header u-center-text text-color-primary w-80">
         <h1>Past Talks</h1>
+        <p className="u-margin-bottom-medium">I love sharing my knowlegde with others. Reach out to me via my 
+        email address for any speaking opportunity.</p>
       </div>
 
       <div className="container">

@@ -51,6 +51,7 @@ const MainLayout = ({ children, id }) => {
       </Head>
       
       <div className="App">
+        
         {/* Sidebar */}
         <section id="side-nav" className="l-bg-color is-fixed">
           <header id="header u-center">
@@ -77,24 +78,13 @@ const MainLayout = ({ children, id }) => {
             <div className="contacts-links u-margin-top-small">
               <ul className="contacts--list d-flex u-center">
                 <li className="social--item">
-                  <a href="https://www.facebook.com/estheritolima">
-                    <i className="fa fa-facebook icon-bg" />
-                  </a>
+                  <a href="https://github.com/itolimaesther"><i className="fa fa-github icon-bg" /></a>
                 </li>
                 <li className="social--item">
-                  <a href="https://www.instagram.com/urintdevgal/">
-                    <i className="fa fa-instagram icon-bg" />
-                  </a>
+                  <a href="https://www.linkedin.com/in/itolimaesther/"><i className="fa fa-linkedin icon-bg" /></a>
                 </li>
                 <li className="social--item">
-                  <a href="https://twitter.com/Ur_melanin_dev">
-                    <i className="fa fa-twitter icon-bg" />
-                  </a>
-                </li>
-                <li className="social--item">
-                  <a href="https://www.linkedin.com/in/itolimaesther/">
-                    <i className="fa fa-linkedin icon-bg" />
-                  </a>
+                  <a href="https://twitter.com/Ur_melanin_dev"><i className="fa fa-twitter icon-bg" /></a>
                 </li>
               </ul>
             </div>
@@ -103,7 +93,7 @@ const MainLayout = ({ children, id }) => {
         {/* Main  Content */}
         {children}
 
-        {/* <noscript>You need javascript in order to browse this webite</noscript> */}
+        <noscript>You need javascript in order to browse this webite</noscript>
 
         {/* Footer */}
         <footer id="footer"></footer>
