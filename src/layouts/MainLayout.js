@@ -37,8 +37,8 @@ const MainLayout = ({ children, id }) => {
   )
 
   const NavBar = props => (
-    <nav id="navigation" className="u-margin-top-smaller">
-      <ul className="navigation--list u-right-text u-margin-right u-margin-left">
+    <nav id="navigation">
+      <ul className="navigation--list u-right-text u-padding">
         {props.children}
       </ul>
     </nav>
@@ -65,8 +65,8 @@ const MainLayout = ({ children, id }) => {
             ))}
           </NavBar>
 
-          <section id="contacts" className="u-center">
-            <div className="contacts-info u-center-text u-margin-top-small">
+          <section id="contacts" className="u-center u-padding">
+            <div className="contacts-info u-center-text">
               <p className="contact--text">Let's talk</p>
               <p className="contact--email">
                 <a href="mailto:itolimaesther@gmail.com">
@@ -74,7 +74,7 @@ const MainLayout = ({ children, id }) => {
                 </a>
               </p>
             </div>
-            <div className="contacts-links u-margin-top-medium">
+            <div className="contacts-links u-margin-top-small">
               <ul className="contacts--list d-flex u-center">
                 <li className="social--item">
                   <a href="https://www.facebook.com/estheritolima">
@@ -103,7 +103,7 @@ const MainLayout = ({ children, id }) => {
         {/* Main  Content */}
         {children}
 
-        <noscript>You need javascript in order to browse this webite</noscript>
+        {/* <noscript>You need javascript in order to browse this webite</noscript> */}
 
         {/* Footer */}
         <footer id="footer"></footer>

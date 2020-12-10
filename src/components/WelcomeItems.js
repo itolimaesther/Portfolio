@@ -1,13 +1,14 @@
 import React from "react";
 
-const WelcomeItems = props => {
+const WelcomeItems = ({greet, stack, introduction}) => {
   return (
-    <div className="welcome-content">
-      <h3 className="grid--title u-margin-top-huge u-padding-left u-padding-right u-center-text">
-        {props.name}
+    <div className="welcome-content u-margin-top-big">
+      <h5 className="greeting u-padding-left u-padding-right u-left-text"> {greet} </h5>
+      <h3 className="grid--title u-margin-top-smaller u-padding-left u-padding-right u-center-text">
+        {stack}
       </h3>
       <p className="grid-intro u-padding-left-small u-padding-right-small u-center-text">
-        {props.introduction}
+        {introduction}
       </p>
     </div>
   );

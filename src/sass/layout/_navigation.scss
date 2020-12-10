@@ -1,36 +1,51 @@
 // Navigation
 
-.navigation--item{
-    position: relative;
-    margin: 0.8em 0;
+.navigation--item {
+  position: relative;
+  margin: 0.8em 0;
 
-    a{
-        line-height: 3rem;
-        text-transform: uppercase;
-        letter-spacing: 0.4em;
-        color: rgba(#FFF, 0.35);
-        display: block;
-        transition: all ease-out 300ms;
+  a {
+    line-height: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: rgba(#fff, 0.35);
+    display: block;
+    transition: all ease-out 300ms;
+  }
+
+
+
+  &.is-active a{
+    color: #fff;
+  }
+  &:not(.is-active)::after {
+    opacity: 0.2;
+  }
+  &:not(.is-active):hover a {
+    color: rgba(#fff, 0.75);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background: black;
+    left: 0;
+    bottom: 0;
+    background-image: $bg-color-gradient;
+  }
+}
+
+.contacts-info{
+
+    .contact--text{
+        color: $color-white;
 
     }
 
-        &.is-active a {
-            color: #FFF;
-        }
-        &:not(.is-active)::after {
-            opacity: 0.2;
-        }
-        &:not(.is-active):hover a {
-          color: rgba(#fff, 0.75);
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 0.2em;
-            background: black;
-            left: 0;
-            bottom: 0;
-            background-image: $bg-color-gradient;
-          }
+    .contact--email{
+        font-size: $smaller-font-size;
+
     }
+}
+

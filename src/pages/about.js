@@ -9,7 +9,7 @@ const About = () => {
       <div className="grid l-grid-height">
         <AboutItems headshot={Image1} />
 
-        <div className="l-grid-right u-padding-left-small u-padding-right-small u-margin-top-medium text-color-primary">
+        <div className="l-grid-right u-padding u-margin-top-medium text-color-primary sm-left-grid">
           <p className="u-justify-text u-text-height">
             Esther Itolima is a Frontend Web Developer based in Lagos, Nigeria.
             She is currently working with Cognideck.
