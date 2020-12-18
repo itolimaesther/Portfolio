@@ -2,6 +2,7 @@ import React from "react"
 import logo from "./../assets/logo.png"
 import { Link } from "gatsby"
 import { Helmet as Head } from "react-helmet";
+import SEO from "./components/Seo.js"
 import '../sass/main.scss';
 
 
@@ -46,12 +47,13 @@ const MainLayout = ({ children, id }) => {
 
   return (
     <main id="main">
+      <SEO />
       <Head>
         <title>Esther Itolima - {id[0].toUpperCase()}{id.slice(1)}</title>
       </Head>
       
       <div className="App">
-        
+
         {/* Sidebar */}
         <section id="side-nav" className="l-bg-color is-fixed">
           <header id="header u-center">
@@ -78,13 +80,13 @@ const MainLayout = ({ children, id }) => {
             <div className="contacts-links u-margin-top-small">
               <ul className="contacts--list d-flex u-center">
                 <li className="social--item">
-                  <a href="https://github.com/itolimaesther"><i className="fa fa-github icon-bg" /></a>
+                  <a role="button" aria-label="github" href="https://github.com/itolimaesther"><i className="fa fa-github icon-bg" /></a>
                 </li>
                 <li className="social--item">
-                  <a href="https://www.linkedin.com/in/itolimaesther/"><i className="fa fa-linkedin icon-bg" /></a>
+                  <a role="button" aria-label="linkedin" href="https://www.linkedin.com/in/itolimaesther/"><i className="fa fa-linkedin icon-bg" /></a>
                 </li>
                 <li className="social--item">
-                  <a href="https://twitter.com/Ur_melanin_dev"><i className="fa fa-twitter icon-bg" /></a>
+                  <a role="button" aria-label="twitter" href="https://twitter.com/Ur_melanin_dev"><i className="fa fa-twitter icon-bg" /></a>
                 </li>
               </ul>
             </div>

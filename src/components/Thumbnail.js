@@ -1,11 +1,11 @@
-import React from 'react'; // Import the Component component from React
+import React from 'react';
 
 
 
 
 function Thumbnail({image,technologies,description, link}) {
 
-    const techItems = technologies.map((list) => <li className="technologies-list"> {list} </li>)
+    const techItems = technologies.map((list, index) => <li className="technologies-list" key={index}> {list} </li>)
 
     return (
         <div  className="showcase w-80" data-target="showcase">

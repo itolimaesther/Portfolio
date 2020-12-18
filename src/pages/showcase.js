@@ -67,9 +67,9 @@ const Showcase = () => {
     >
       <div className="projects-header u-center-text text-color-primary w-80">
         <h1>Major Projects</h1>
-        <p>Here is a selection of projects that i have worked on. Most of my works can be found on my 
-          <a href="https://github.com/itolimaesther" className="git-link"> GitHub account</a>.
-           I have worked on challenges and personal stuff.</p>
+        <p>Here is a selection of projects that i have worked on. Most of my works can be found on  
+          <a href="https://github.com/itolimaesther" className="a-link"> my GitHub account</a>
+          . I have worked on challenges and personal stuff.</p>
       </div>
       {thumbnailData.map(data => (
         <Thumbnail
