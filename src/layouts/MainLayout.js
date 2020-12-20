@@ -1,12 +1,10 @@
 import React from "react"
-import logo from "./../assets/logo.png"
-import { Link } from "gatsby"
-import { Helmet as Head } from "react-helmet";
-import SEO from "./components/Seo.js"
-import '../sass/main.scss';
+import { Link, useStaticQuery, graphql } from "gatsby"
+import { Helmet as Head } from "react-helmet"
+import SEO from "../components/seo"
+import "../sass/main.scss"
 
-
-
+import Img from "gatsby-image"
 
 const navList = [
   { nav: "/", label: "welcome" },
@@ -27,6 +25,19 @@ const onPage = (id, navUrl) => {
 }
 
 const MainLayout = ({ children, id }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      logoGatsbyImage: file(relativePath: { eq: "logo.png" }) {
+        id
+        childImageSharp {
+          fluid(maxWidth: 100, quality: 90) {
+            ...GatsbyImageSharpFluid_noBase64
+          }
+        }
+      }
+    }
+  `)
+
   const Menu = ({ nav, label }) => (
     <li
       className={
@@ -47,18 +58,26 @@ const MainLayout = ({ children, id }) => {
 
   return (
     <main id="main">
-      <SEO />
+      <SEO title="Esther Itolima" />
       <Head>
-        <title>Esther Itolima - {id[0].toUpperCase()}{id.slice(1)}</title>
+        <title>
+          Esther Itolima - {id[0].toUpperCase()}
+          {id.slice(1)}
+        </title>
       </Head>
-      
-      <div className="App">
 
+      <div className="App">
         {/* Sidebar */}
         <section id="side-nav" className="l-bg-color is-fixed">
           <header id="header u-center">
             <div className="logo u-center-text u-margin-top-small">
-              <img className="logo--width" src={logo} alt="brand-logo" />
+              <Img
+                className="logo-width"
+                style={{ margin: "1rem", maxHeight: "calc(25vh - 4rem)" }}
+                imgStyle={{ objectFit: "contain" }}
+                fluid={data.logoGatsbyImage.childImageSharp.fluid}
+                alt="logo"
+              />
             </div>
           </header>
 
@@ -80,13 +99,31 @@ const MainLayout = ({ children, id }) => {
             <div className="contacts-links u-margin-top-small">
               <ul className="contacts--list d-flex u-center">
                 <li className="social--item">
-                  <a role="button" aria-label="github" href="https://github.com/itolimaesther"><i className="fa fa-github icon-bg" /></a>
+                  <a
+                    role="button"
+                    aria-label="github"
+                    href="https://github.com/itolimaesther"
+                  >
+                    <i className="fa fa-github icon-bg" />
+                  </a>
                 </li>
                 <li className="social--item">
-                  <a role="button" aria-label="linkedin" href="https://www.linkedin.com/in/itolimaesther/"><i className="fa fa-linkedin icon-bg" /></a>
+                  <a
+                    role="button"
+                    aria-label="linkedin"
+                    href="https://www.linkedin.com/in/itolimaesther/"
+                  >
+                    <i className="fa fa-linkedin icon-bg" />
+                  </a>
                 </li>
                 <li className="social--item">
-                  <a role="button" aria-label="twitter" href="https://twitter.com/Ur_melanin_dev"><i className="fa fa-twitter icon-bg" /></a>
+                  <a
+                    role="button"
+                    aria-label="twitter"
+                    href="https://twitter.com/Ur_melanin_dev"
+                  >
+                    <i className="fa fa-twitter icon-bg" />
+                  </a>
                 </li>
               </ul>
             </div>

@@ -2,15 +2,19 @@ module.exports = {
   siteMetadata: {
     title: `Esther Itolima`,
     description: `Frontend Developer`,
-    image: `./src/assets/logo.png`,
+    image: `./src/images/logo.png`,
     author: `@esther`,
     keywords: `frontend developer, web developer, mobile-friendly, user-experience`,
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
-  flags : { DEV_SSR: true, PRESERVE_WEBPACK_CACHE: true},
+  flags : { DEV_SSR: true, PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: "gatsby-plugin-sass",
       options: {
@@ -34,8 +38,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -59,7 +62,7 @@ module.exports = {
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
-    `gatsby-plugin-sitemap`,
+    
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
@@ -69,7 +72,7 @@ module.exports = {
         precachePages: [`/welcome/`, `/about/*`],
       },
     },
-    `gatsby-plugin-netlify-cms`,
+    
 
   ],
 }
