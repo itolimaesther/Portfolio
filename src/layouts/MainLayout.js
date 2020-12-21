@@ -4,7 +4,7 @@ import { Helmet as Head } from "react-helmet"
 import SEO from "../components/seo"
 import "../sass/main.scss"
 
-import Img from "gatsby-image"
+import Img from "gatsby-image/withIEPolyfill"
 
 const navList = [
   { nav: "/", label: "welcome" },
@@ -30,8 +30,8 @@ const MainLayout = ({ children, id }) => {
       logoGatsbyImage: file(relativePath: { eq: "logo.png" }) {
         id
         childImageSharp {
-          fluid(maxWidth: 100, quality: 90) {
-            ...GatsbyImageSharpFluid_noBase64
+          fixed(width: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -73,9 +73,9 @@ const MainLayout = ({ children, id }) => {
             <div className="logo u-center-text u-margin-top-small">
               <Img
                 className="logo-width"
-                style={{ margin: "1rem", maxHeight: "calc(25vh - 4rem)" }}
-                imgStyle={{ objectFit: "contain" }}
-                fluid={data.logoGatsbyImage.childImageSharp.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                fixed={data.logoGatsbyImage.childImageSharp.fixed}
                 alt="logo"
               />
             </div>

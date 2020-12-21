@@ -28,7 +28,7 @@ const Talks = () => {
       <div className="container">
         {talkEntry.map((item, index) => {
           return (
-            <div className="accordion" onClick={() => toggle(index)} key={index} onKeyDown={toggle} role = "button" tabindex="0">
+            <div className="accordion" onClick={() => toggle(index)} key={index} onKeyDown={toggle} role = "button" tabIndex="0">
             <div className="accordion-item" id="question1">
               <button type = "button" className="accordion-link" href="#"  >
                 {item.year}

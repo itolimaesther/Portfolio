@@ -11,10 +11,17 @@ module.exports = {
   flags : { DEV_SSR: true, PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 800,
+        wrapperStyle: fluidResult => `flex:${_.round(fluidResult.aspectRatio, 2)};`,
+      },
+    },
     {
       resolve: "gatsby-plugin-sass",
       options: {
@@ -35,7 +42,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: path.join(__dirname, `src`, `images`),
       },
     },
     
