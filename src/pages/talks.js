@@ -35,10 +35,17 @@ const Talks = () => {
                 
                 <i className={`fa ${clicked === index ? 'fa-angle-down' : 'fa-angle-right'}`} />
               </button>
-              <div className={`answer ${clicked === index && 'open'}`}>
-                <p>{ item.title }</p>
-                <p>{ item.text }</p>
-              </div>
+
+              {item.talk.forEach((elem, index) => {
+                return (
+                  <div className={`answer ${clicked === index && 'open'}`} key={index}>
+                    <p>{ elem.date }</p>
+                    <p>{ elem.title }</p>
+                    <p>{ elem.text }</p>
+                  </div>
+                )
+              })}
+
             </div>
           </div>
           )

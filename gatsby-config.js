@@ -4,7 +4,7 @@ module.exports = {
     description: `Frontend Developer`,
     image: `./src/images/logo.png`,
     author: `@esther`,
-    keywords: `frontend developer, web developer, mobile-friendly, user-experience`,
+    keywords: `frontend developer, web developer, mobile-friendly, user-experience, nigeria`,
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
@@ -15,13 +15,13 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        maxWidth: 800,
-        wrapperStyle: fluidResult => `flex:${_.round(fluidResult.aspectRatio, 2)};`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-remark-images`,
+    //   options: {
+    //     maxWidth: 800,
+    //     wrapperStyle: fluidResult => `flex:${_.round(fluidResult.aspectRatio, 2)};`,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-sass",
       options: {
@@ -76,7 +76,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-offline`,
       options: {
-        precachePages: [`/welcome/`, `/about/*`],
+        precachePages: [`/welcome/`, `/about/`],
       },
     },
     

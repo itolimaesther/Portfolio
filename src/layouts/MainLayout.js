@@ -72,10 +72,10 @@ const MainLayout = ({ children, id }) => {
           <header id="header u-center">
             <div className="logo u-center-text u-margin-top-small">
               <Img
-                className="logo-width"
                 objectFit="cover"
                 objectPosition="50% 50%"
                 fixed={data.logoGatsbyImage.childImageSharp.fixed}
+                className="logo-width"
                 alt="logo"
               />
             </div>
