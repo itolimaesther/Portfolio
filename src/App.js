@@ -12,10 +12,10 @@ import {
 
 
 
-import Welcome from './components/Welcome';
-import About from './components/About';
-import Showcase from './components/Showcase';
-import Talks from './components/Talks';
+// import Welcome from './components/Welcome';
+// import About from './components/About';
+// import Showcase from './components/Showcase';
+// import Talks from './components/Talks';
 
 
 function App() {

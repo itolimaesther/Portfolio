@@ -36,9 +36,9 @@ const Talks = () => {
                 <i className={`fa ${clicked === index ? 'fa-angle-down' : 'fa-angle-right'}`} />
               </button>
 
-              {item.talk.forEach((elem, index) => {
+              {item.talks.map((elem, idx) => {
                 return (
-                  <div className={`answer ${clicked === index && 'open'}`} key={index}>
+                  <div className={`answer ${clicked === index && 'open'}`} key={idx} >
                     <p>{ elem.date }</p>
                     <p>{ elem.title }</p>
                     <p>{ elem.text }</p>

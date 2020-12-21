@@ -4,7 +4,7 @@ module.exports = {
     description: `Frontend Developer`,
     image: `./src/images/logo.png`,
     author: `@esther`,
-    keywords: `frontend developer, web developer, mobile-friendly, user-experience`,
+    keywords: `frontend developer, web developer, mobile-friendly, user-experience, nigeria`,
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
@@ -62,6 +62,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/welcome/`, `/about/`],
+      },
+    },
+    {
     resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.example.com',
@@ -73,13 +79,8 @@ module.exports = {
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [`/welcome/`, `/about/*`],
-      },
-    },
     
+    `gatsby-plugin-no-javascript`
 
   ],
 }

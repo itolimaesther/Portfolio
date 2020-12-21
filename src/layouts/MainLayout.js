@@ -30,7 +30,7 @@ const MainLayout = ({ children, id }) => {
       logoGatsbyImage: file(relativePath: { eq: "logo.png" }) {
         id
         childImageSharp {
-          fixed(width: 500) {
+          fixed(width: 100) {
             ...GatsbyImageSharpFixed
           }
         }

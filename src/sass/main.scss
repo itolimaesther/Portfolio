@@ -2,8 +2,6 @@
 // @import "font-awesome/scss/font-awesome.scss";
 // All Base specific partials
 
-@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Poppins&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 @import 'base/colors';
 @import 'base/variables';
@@ -13,6 +11,8 @@
 @import 'base/animations';
 @import 'base/icons';
 
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Poppins&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 // All layout specific partials
 
 @import 'layout/header';
