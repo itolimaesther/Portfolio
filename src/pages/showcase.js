@@ -49,13 +49,11 @@ const thumbnailData = [
     img: img4,
     id: 4,
     description:
-      "3Melineo calculator is a solar calculator that calculates the power you need for your appliances in the house. ",
+      "A clone of github page",
       technologies: [
-        'HTML',
-        'CSS',
-        'JavaScript'
+        'Webflow'
       ],
-    link: "#",
+    link: "https://esthers-first-project-d00ac9.webflow.io/",
   },
 ]
 

@@ -54,7 +54,8 @@ const Talks = () => {
 
       <div className="talks-header u-center-text text-color-primary w-80">
         <h1>Past Talks</h1>
-        <p className="u-margin-bottom-medium"></p>
+        <p className="u-margin-bottom-medium">Want to invite me to speak at your event/meetup. Reach out to me via 
+        <strong><a href="mailto:itolimaesther@gmail.com" className="a-link"> email</a></strong> or <strong><a href="https://twitter.com/Ur_melanin_dev" className="a-link">twitter.</a></strong></p>
       </div>
 
       <div className="container">
