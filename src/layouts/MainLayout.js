@@ -129,7 +129,10 @@ const MainLayout = ({ children, id }) => {
             </div>
           </section>
         </section>
+        
+        
         {/* Main  Content */}
+
         {children}
 
         <noscript>You need javascript in order to browse this webite</noscript>

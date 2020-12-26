@@ -71,7 +71,7 @@
     .l-grid-right{
         .profile-image {
             height: 100%;
-            background-image: url(../../images/img1.png);
+            background-image: url(../../images/author.png);
             background-position: top;
             background-repeat: no-repeat;
             background-size: contain;
@@ -128,21 +128,29 @@
 
 // Talks
 
+.talks-wrapper{
+  width: 55%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
   .container{
-    width: 80%;
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 0 1.5rem;
   
-    
-    
+    .accordion{
+      border: 2px solid #1a292d;
+      margin-bottom: 3rem;
+      border-radius: .4rem;
+      border-bottom: 8px solid;
+      box-shadow: .5rem 2px .5rem rgba(151, 151, 151, 0.1);
+
       .accordion-item{
         background-color: $color-white;
-        border-radius: .4rem;
-        margin-bottom: 3rem;
+        // border-radius: .4rem;
+        // margin-bottom: 3rem;
         padding: 1rem;
-        border: 2px solid #1a292d;
-        box-shadow: .5rem 2px .5rem rgba(218, 213, 213, 0.1);
+        // border: 2px solid #1a292d;
+        
+        
   
         &:target .accordion-link .fa-angle-right{
           display: block;
@@ -201,12 +209,16 @@
             padding: .1rem 1.5rem;
           }
         }
-
+  
         .open{
           max-height: 20rem;
         }
       }
+    }
+    
   }
+}
+
 
 
 
@@ -252,7 +264,7 @@
 
         &.profile-image {
             height: 100%;
-            background-image: url(../../images/img1.png);
+            background-image: url(../../images/author.png);
             background-position: top;
             background-repeat: no-repeat;
             background-size: contain !important;

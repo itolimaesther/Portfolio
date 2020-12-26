@@ -49,13 +49,13 @@
     #side-nav{
         display: block !important;
         max-width: 100% !important;
-        width: 100% !important;
+        width: 66% !important;
         flex: none !important;
         padding-bottom: 15px;
 
 
         &.is-fixed{
-        position: static;
+        // position: static;
     }
     }
 
