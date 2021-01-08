@@ -19,8 +19,9 @@ const Talks = () => {
   const talkEntry = [
 
     { 
-      title: "Coming soon...", 
-      text: "Coming soon..." 
+      date: "May, 2018",
+      title: "Building a career in Programming and Web Development - How and Why?",
+      meetup: "Techcultureng ICT Career fair",
     },
 
     {
@@ -31,7 +32,7 @@ const Talks = () => {
 
     {
       date: "November, 2019",
-      title: "Volunter",
+      title: "Developing a volunteering habit",
       meetup: "GDG Onitsha Devfest",
     },
 
