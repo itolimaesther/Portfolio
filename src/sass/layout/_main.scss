@@ -122,6 +122,10 @@
       }
     }
 
+    .mobile-toggle{
+      display: none;
+    }
+
 }
 
 
@@ -254,7 +258,9 @@
             margin-top: 2rem !important;
           }
 
-
+          .u-margin-top-big {
+            margin-top: 4rem !important;
+          }
 
           .u-margin-top-huge {
             margin-top: 2rem !important;
@@ -275,7 +281,7 @@
       }
 
       .grid{
-        position: relative;
+        position: absolute;
         top: -1%;
         display: grid;
         grid-template-columns: 1fr !important;
@@ -302,6 +308,14 @@
 
     .sm-right-grid{
       margin-top: -100px !important;
+    }
+
+    .mobile-toggle{
+      font-size: 25px;
+      color: $color-white !important;
+      margin: 10px;
+      display: block;
+      float: right;
     }
     
   }
@@ -354,6 +368,8 @@
     border-radius: 20px;
     border: 2px solid rgb(105, 105, 105);
   }
+
+  
 
 
   

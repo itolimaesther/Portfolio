@@ -47,11 +47,12 @@
 
 @media (max-width: 760px) {
     #side-nav{
-        display: block !important;
+        // display: block !important;
         max-width: 100% !important;
         width: 66% !important;
         flex: none !important;
         padding-bottom: 15px;
+        display: none;
 
 
         &.is-fixed{

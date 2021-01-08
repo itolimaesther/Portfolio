@@ -1,10 +1,12 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Helmet as Head } from "react-helmet"
 import SEO from "../components/seo"
 import "../sass/main.scss"
 
 import Img from "gatsby-image/withIEPolyfill"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const navList = [
   { nav: "/", label: "welcome" },
@@ -50,11 +52,14 @@ const MainLayout = ({ children, id }) => {
 
   const NavBar = props => (
     <nav id="navigation">
+      
       <ul className="navigation--list u-right-text u-padding">
         {props.children}
       </ul>
     </nav>
   )
+
+  const [showMenu, setShowMenu] = useState(false)
 
   return (
     <main id="main">
@@ -67,6 +72,12 @@ const MainLayout = ({ children, id }) => {
       </Head>
 
       <div className="App">
+        <span className="mobile-toggle">
+        <FontAwesomeIcon 
+          icon={faBars}
+          onClick={() => setShowMenu(!showMenu)}
+        />
+        </span>
         {/* Sidebar */}
         <section id="side-nav" className="l-bg-color is-fixed">
           <header id="header u-center">
