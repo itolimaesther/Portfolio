@@ -37,7 +37,7 @@ const thumbnailData = [
     img: img3,
     id: 3,
     description:
-      "Solar enery app. Calculates the amount of power needed for your appliaances.",
+      "Solar energy app. Calculates the amount of power needed for your appliaances.",
       technologies: [
         'HTML',
         'CSS',

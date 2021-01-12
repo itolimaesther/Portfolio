@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
-  flags : { DEV_SSR: true, PRESERVE_WEBPACK_CACHE: true },
+  flags : { DEV_SSR: true},
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
