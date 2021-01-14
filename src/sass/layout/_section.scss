@@ -52,12 +52,10 @@
         width: 66% !important;
         flex: none !important;
         padding-bottom: 15px;
-        display: none;
+        display: block;
+        z-index: 50;
 
 
-        &.is-fixed{
-        // position: static;
-    }
     }
 
     #contacts{

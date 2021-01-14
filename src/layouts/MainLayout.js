@@ -5,8 +5,9 @@ import SEO from "../components/seo"
 import "../sass/main.scss"
 
 import Img from "gatsby-image/withIEPolyfill"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { useTransition, animated } from "react-spring"
 
 const navList = [
   { nav: "/", label: "welcome" },
@@ -52,7 +53,6 @@ const MainLayout = ({ children, id }) => {
 
   const NavBar = props => (
     <nav id="navigation">
-      
       <ul className="navigation--list u-right-text u-padding">
         {props.children}
       </ul>
@@ -60,9 +60,23 @@ const MainLayout = ({ children, id }) => {
   )
 
   const [showMenu, setShowMenu] = useState(false)
+  const handleClick = () => setShowMenu(!showMenu)
+  const closeMobileMenu = () => setShowMenu(false)
+
+  const maskTransitions = useTransition(showMenu, null, {
+    // from: { position: "absolute", opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  })
+
+  const menuTransitions = useTransition(showMenu, null, {
+    from: { opacity: 0, transform: "translateX(-100%)" },
+    enter: { opacity: 1, transform: "translateY(0%)" },
+    leave: { opacity: 0, transform: "translateX(-100%)" },
+  })
 
   return (
-    <main id="main">
+    <div className="container-wrapper">
       <SEO title="Esther Itolima" />
       <Head>
         <title>
@@ -72,86 +86,114 @@ const MainLayout = ({ children, id }) => {
       </Head>
 
       <div className="App">
-        <span className="mobile-toggle">
-        <FontAwesomeIcon 
-          icon={faBars}
-          onClick={() => setShowMenu(!showMenu)}
-        />
-        </span>
         {/* Sidebar */}
-        <section id="side-nav" className="l-bg-color is-fixed">
-          <header id="header u-center">
-            <div className="logo u-center-text u-margin-top-small">
-              <Img
-                objectFit="cover"
-                objectPosition="50% 50%"
-                fixed={data.logoGatsbyImage.childImageSharp.fixed}
-                className="logo-width"
-                alt="logo"
-              />
-            </div>
-          </header>
+       {/* { showMenu ? "navigation--item is-active" : "navigation--item" } */}
+       
+        <section id="side-nav" className="l-bg-color is-fixed" >
+                 <header id="header u-center">
+                   <div className="logo u-center-text u-margin-top-small">
+                     <Img
+                       objectFit="cover"
+                       objectPosition="50% 50%"
+                       fixed={data.logoGatsbyImage.childImageSharp.fixed}
+                       className="logo-width"
+                       alt="logo"
+                     />
+                   </div>
+                 </header>
+       
+                 <NavBar>
+                   {navList.map((menuItem, index) => (
+                     <Menu label={menuItem.label} nav={menuItem.nav} key={index} />
+                   ))}
+                 </NavBar>
+       
+                 <section id="contacts" className="u-center u-padding">
+                   <div className="contacts-info u-center-text">
+                     <p className="contact--text">Let's talk</p>
+                     <p className="contact--email">
+                       <a href="mailto:itolimaesther@gmail.com">
+                         itolimaesther@gmail.com
+                       </a>
+                     </p>
+                   </div>
+                   <div className="contacts-links u-margin-top-small">
+                     <ul className="contacts--list d-flex u-center">
+                       <li className="social--item">
+                         <a
+                           role="button"
+                           aria-label="github"
+                           href="https://github.com/itolimaesther"
+                         >
+                           <i className="fa fa-github icon-bg" />
+                         </a>
+                       </li>
+                       <li className="social--item">
+                         <a
+                           role="button"
+                           aria-label="linkedin"
+                           href="https://www.linkedin.com/in/itolimaesther/"
+                         >
+                           <i className="fa fa-linkedin icon-bg" />
+                         </a>
+                       </li>
+                       <li className="social--item">
+                         <a
+                           role="button"
+                           aria-label="twitter"
+                           href="https://twitter.com/Qween_Esta"
+                         >
+                           <i className="fa fa-twitter icon-bg" />
+                         </a>
+                       </li>
+                     </ul>
+                   </div>
+                 </section>
+               </section>
+       
 
-          <NavBar>
-            {navList.map((menuItem, index) => (
-              <Menu label={menuItem.label} nav={menuItem.nav} key={index} />
-            ))}
-          </NavBar>
+        <span className="mobile-toggle">
+          <FontAwesomeIcon
+            className="mobile-icon"
+            icon={faBars}
+            onClick={handleClick}
+          />
+        </span>
 
-          <section id="contacts" className="u-center u-padding">
-            <div className="contacts-info u-center-text">
-              <p className="contact--text">Let's talk</p>
-              <p className="contact--email">
-                <a href="mailto:itolimaesther@gmail.com">
-                  itolimaesther@gmail.com
-                </a>
-              </p>
-            </div>
-            <div className="contacts-links u-margin-top-small">
-              <ul className="contacts--list d-flex u-center">
-                <li className="social--item">
-                  <a
-                    role="button"
-                    aria-label="github"
-                    href="https://github.com/itolimaesther"
-                  >
-                    <i className="fa fa-github icon-bg" />
-                  </a>
-                </li>
-                <li className="social--item">
-                  <a
-                    role="button"
-                    aria-label="linkedin"
-                    href="https://www.linkedin.com/in/itolimaesther/"
-                  >
-                    <i className="fa fa-linkedin icon-bg" />
-                  </a>
-                </li>
-                <li className="social--item">
-                  <a
-                    role="button"
-                    aria-label="twitter"
-                    href="https://twitter.com/Ur_melanin_dev"
-                  >
-                    <i className="fa fa-twitter icon-bg" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </section>
-        
-        
-        {/* Main  Content */}
+        {maskTransitions.map(({ item, key, props }) => {
+         return item && (<animated.div
+              key={key}
+              style={props}
+              className="menu-open-bg"
+              onClick={closeMobileMenu}
+            ></animated.div>)
+        })}
 
-        {children}
+        {menuTransitions.map(({ item, key, props }) => {
+          return item && (<animated.div
+              key={key}
+              style={props}
+              className="menu-open-bg"
+              // rgba(0,0,0,0.5)
+              onClick={handleClick}
+            >
+            
+             
+            </animated.div>)
+        })}
+
+        <main id="main">
+          {/* Main  Content */}
+
+          {children}
+        </main>
 
         <noscript>You need javascript in order to browse this webite</noscript>
 
         {/* Footer */}
         <footer id="footer"></footer>
       </div>
-    </main>
+    </div>
   )
 }
 

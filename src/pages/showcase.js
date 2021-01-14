@@ -63,6 +63,7 @@ const Showcase = () => {
       id="showcase"
       className="main-content u-padding-left-small u-padding-right-small"
     >
+      <div className="showcase-wrapper">
       <div className="projects-header u-center-text text-color-primary w-80">
         <h1>Major Projects</h1>
         <p>Here is a selection of projects that i have worked on. Most of my works can be found on  
@@ -78,6 +79,7 @@ const Showcase = () => {
           key={data.id}
         />
       ))}
+      </div>
     </MainLayout>
   )
 }
