@@ -214,14 +214,14 @@
       font-size: 25px;
       color: #ffffff !important;
       margin: 10px;
-      display: none;
+      display: flex;
       justify-content: flex-end;
 
       .mobile-icon {
-        background-color: $color-primary;
-        padding: 10px;
-        border-radius: 20%;
-        position: fixed;
+        // background-color: $color-primary;
+        // padding: 10px;
+        // border-radius: 20%;
+        // position: fixed;
       }
     }
 
