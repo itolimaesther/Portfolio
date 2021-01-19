@@ -114,13 +114,19 @@
     }
   }
 
-  .mobile-toggle {
-    // display: none;
-
-    .mobile-icon{
+  .container-wrapper{
+    
+  
+    .mobile-toggle {
       display: none;
+  
+      .mobile-icon{
+        display: none;
+      }
     }
   }
+
+  
 }
 
 // Talks
