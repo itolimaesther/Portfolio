@@ -1,13 +1,13 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Helmet as Head } from "react-helmet"
 import SEO from "../components/seo"
 import "../sass/main.scss"
 
 import Img from "gatsby-image/withIEPolyfill"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { useTransition, animated } from "react-spring"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faBars } from "@fortawesome/free-solid-svg-icons"
+// import { useTransition, animated } from "react-spring"
 
 const navList = [
   { nav: "/", label: "welcome" },
@@ -59,21 +59,21 @@ const MainLayout = ({ children, id }) => {
     </nav>
   )
 
-  const [showMenu, setShowMenu] = useState(false)
-  const handleClick = () => setShowMenu(!showMenu)
-  const closeMobileMenu = () => setShowMenu(false)
+  // const [showMenu, setShowMenu] = useState(false)
+  // const handleClick = () => setShowMenu(!showMenu)
+  // const closeMobileMenu = () => setShowMenu(false)
 
-  const maskTransitions = useTransition(showMenu, null, {
-    // from: { position: "absolute", opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  })
+  // const maskTransitions = useTransition(showMenu, null, {
+  //   // from: { position: "absolute", opacity: 0 },
+  //   enter: { opacity: 1 },
+  //   leave: { opacity: 0 },
+  // })
 
-  const menuTransitions = useTransition(showMenu, null, {
-    from: { opacity: 0, transform: "translateX(-100%)" },
-    enter: { opacity: 1, transform: "translateY(0%)" },
-    leave: { opacity: 0, transform: "translateX(-100%)" },
-  })
+  // const menuTransitions = useTransition(showMenu, null, {
+  //   from: { opacity: 0, transform: "translateX(-100%)" },
+  //   enter: { opacity: 1, transform: "translateY(0%)" },
+  //   leave: { opacity: 0, transform: "translateX(-100%)" },
+  // })
 
   return (
     <div className="container-wrapper">
@@ -152,7 +152,7 @@ const MainLayout = ({ children, id }) => {
                </section>
        
 
-        <span className="mobile-toggle">
+        {/* <span className="mobile-toggle">
           <FontAwesomeIcon
             className="mobile-icon"
             icon={faBars}
@@ -180,7 +180,7 @@ const MainLayout = ({ children, id }) => {
             
              
             </animated.div>)
-        })}
+        })} */}
 
         <main id="main">
           {/* Main  Content */}
