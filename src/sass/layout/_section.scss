@@ -15,6 +15,7 @@
 
     &.is-fixed{
         position: fixed;
+        overflow-y: auto;
     }
 }
 

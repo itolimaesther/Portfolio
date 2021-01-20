@@ -28,7 +28,18 @@ const onPage = (id, navUrl) => {
 }
 
 const MainLayout = ({ children, id }) => {
-  
+  const data = useStaticQuery(graphql`
+    query {
+      logoGatsbyImage: file(relativePath: { eq: "logo.png" }) {
+        id
+        childImageSharp {
+          fixed(width: 100, height: 100) {
+            ...GatsbyImageSharpFixed_noBase64
+          }
+        }
+      }
+    }
+  `)
 
   const Menu = ({ nav, label }) => (
     <li
@@ -187,16 +198,3 @@ const MainLayout = ({ children, id }) => {
 }
 
 export default MainLayout
-
-const data = useStaticQuery(graphql`
-    query {
-      logoGatsbyImage: file(relativePath: { eq: "logo.png" }) {
-        id
-        childImageSharp {
-          fixed(width: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
