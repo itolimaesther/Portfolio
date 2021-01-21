@@ -1,11 +1,14 @@
 // Section
 
-#side-nav{
+.container-wrapper{
+
+    #side-nav{
     width: 220px;
     position: relative;
     left: 0;
     top: 0;
     overflow-x: hidden;
+    margin: 0;
 
 
     &.l-bg-color{
@@ -41,12 +44,20 @@
             text-align: center;
             color: $color-primary;
             border-radius: 5px;
+            letter-spacing: 0;
 
         }
     }
 }
+}
+
+
+
 
 @media (max-width: 760px) {
+   .container-wrapper{
+
+
     #side-nav{
         // display: block !important;
         max-width: 100% !important;
@@ -62,5 +73,6 @@
     #contacts{
         text-align: center !important;
     }
+   }
   
   }

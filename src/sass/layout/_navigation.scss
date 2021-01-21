@@ -5,7 +5,6 @@
   margin: 0.8em 0;
   
 
-  // ^2.22.15
 
   a {
     line-height: 3rem;
@@ -48,7 +47,13 @@
 
     .contact--email{
         font-size: $smaller-font-size;
+        
+        a{
+          text-transform: lowercase !important;
+          letter-spacing: 0px;
+        }
 
     }
+
 }
 

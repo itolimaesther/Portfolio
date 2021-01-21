@@ -1,133 +1,130 @@
-#main {
-  margin-left: 219px;
-  height: 100%;
-  height: 100vh;
-
-  .text-color-primary {
-    color: $color-primary;
+.container-wrapper{
+    
+  
+  .mobile-menu {
+    display: none;
   }
 
-  .grid {
-    display: grid;
-    position: absolute;
-    grid-template-columns: 1fr 1fr;
-    max-width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    top: 0;
-
-    .l-grid-height {
-      height: 100vh;
-    }
-  }
-
-  .l-grid-left {
+  #main {
+    margin-left: 219px;
+    height: 100%;
     height: 100vh;
-
-    &.bg-color {
-      background-color: $color-primary;
-      height: 100%;
+  
+    .text-color-primary {
+      color: $color-primary;
     }
-
-    .greeting {
-      font-size: $medium-font-size;
-      color: $color-white;
-    }
-
-    .grid--title {
-      font-size: $biggest-font-size;
-      margin-bottom: 0;
-      color: $color-white;
-    }
-    .grid-intro {
-      line-height: 1.5rem;
-      letter-spacing: 1.5px;
-      color: $color-white;
-    }
-
-    // about page styles
-    & img {
-      border: 1px solid $color-primary;
-      border-radius: 200px;
-      width: 60%;
-      background: $color-primary;
-    }
-  }
-
-  .abt-image-grid {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
-
-  .l-grid-right {
-    .profile-image {
-      height: 100%;
-      background-image: url(../../images/author.png);
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-  }
-
-  // Projects
-
-  .showcase1 {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-  }
-  .w-80 {
-    width: 80%;
-    margin: auto;
-  }
-
-  .row {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-
-    .col-6 {
-      width: 50%;
-      display: flex;
-
-      .h3,
-      p {
-        color: $color-primary;
+  
+    .grid {
+      display: grid;
+      position: absolute;
+      grid-template-columns: 1fr 1fr;
+      max-width: 100%;
+      min-height: 100vh;
+      margin: 0 auto;
+      top: 0;
+  
+      .l-grid-height {
+        height: 100vh;
       }
-
-      .col-right {
+    }
+  
+    .l-grid-left {
+      height: 100vh;
+  
+      &.bg-color {
+        background-color: $color-primary;
+        height: 100%;
+      }
+  
+      .greeting {
+        font-size: $medium-font-size;
+        color: $color-white;
+      }
+  
+      .grid--title {
+        font-size: $biggest-font-size;
+        margin-bottom: 0;
+        color: $color-white;
+      }
+      .grid-intro {
+        line-height: 1.5rem;
+        letter-spacing: 1.5px;
+        color: $color-white;
+      }
+  
+      // about page styles
+      & img {
+        border: 1px solid $color-primary;
+        border-radius: 200px;
+        width: 60%;
+        background: $color-primary;
+      }
+    }
+  
+    .abt-image-grid {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+  
+    .l-grid-right {
+      .profile-image {
+        height: 100%;
+        background-image: url(../../images/author.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  
+    // Projects
+  
+    .showcase1 {
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+    }
+    .w-80 {
+      width: 80%;
+      margin: auto;
+    }
+  
+    .row {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+  
+      .col-6 {
+        width: 50%;
         display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .live {
+  
+        .h3,
+        p {
           color: $color-primary;
-          text-decoration: underline;
+        }
+  
+        .col-right {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+  
+          .live {
+            color: $color-primary;
+            text-decoration: underline;
+          }
         }
       }
     }
-  }
-
-  .container-wrapper{
     
-  
-    .mobile-toggle {
-      display: none;
-  
-      .mobile-icon{
-        display: none;
-      }
-    }
   }
-
   
 }
+
 
 // Talks
 
@@ -220,18 +217,19 @@
 // Phone media query
 @media (max-width: 760px) {
   .container-wrapper {
-    .mobile-toggle {
+
+    .mobile-menu {
       font-size: 25px;
-      color: #ffffff !important;
       margin: 10px;
       display: flex;
       justify-content: flex-end;
 
       .mobile-icon {
-        // background-color: $color-primary;
-        // padding: 10px;
-        // border-radius: 20%;
-        // position: fixed;
+        background-color: $color-primary;
+        padding: 10px;
+        border-radius: 20%;
+        position: fixed;
+        display: block;
       }
     }
 
@@ -251,6 +249,10 @@
       margin: 0 auto !important;
       height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
       height: calc(var(--vh, 1vh) * 100);
+
+      .showcase-wrapper, .talks-wrapper{
+        margin-top: 54px;
+      }
 
       .l-grid-left {
         max-width: 100%;

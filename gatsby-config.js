@@ -10,6 +10,7 @@ module.exports = {
   },
   flags : { DEV_SSR: true},
   plugins: [
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify-cms`,
@@ -81,13 +82,13 @@ module.exports = {
         sitemap: 'https://www.example.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    },
+    }
     
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     
-    `gatsby-plugin-no-javascript`
+    // `gatsby-plugin-no-javascript`
 
   ],
 }
