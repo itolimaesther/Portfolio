@@ -35,6 +35,11 @@
     left: 0;
     bottom: 0;
     background-image: $bg-color-gradient;
+
+    &:not(:last-child){
+      display: none;
+      bottom: 0;
+    }
   }
 }
 

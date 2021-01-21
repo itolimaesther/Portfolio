@@ -2,13 +2,15 @@
 
 .container-wrapper{
 
-    #side-nav{
+    #side-nav, .side-nav{
     width: 220px;
     position: relative;
     left: 0;
     top: 0;
     overflow-x: hidden;
     margin: 0;
+
+    
 
 
     &.l-bg-color{
@@ -58,7 +60,7 @@
    .container-wrapper{
 
 
-    #side-nav{
+    #side-nav, .side-nav{
         // display: block !important;
         max-width: 100% !important;
         width: 66% !important;
@@ -67,7 +69,9 @@
         display: none;
         z-index: 50;
 
-
+        &.is-active{
+            display: block;
+        }
     }
 
     #contacts{

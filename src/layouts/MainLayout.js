@@ -89,8 +89,9 @@ const MainLayout = ({ children, id }) => {
         </div>
         <section
           id="side-nav"
+          
           className={
-            showMenu ? "navigation--item is-active" : "navigation--item"
+            showMenu ? "side-nav is-active": "side-nav"
           }
           style={{
             background: "#1a292d",
