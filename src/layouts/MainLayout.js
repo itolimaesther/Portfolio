@@ -5,12 +5,12 @@ import SEO from "../components/seo"
 import "../sass/main.scss"
 
 import Img from "gatsby-image/withIEPolyfill"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faBars } from "@fortawesome/free-solid-svg-icons"
-// import { useTransition, animated } from "react-spring"
-// import { config } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { useTransition, animated } from "react-spring"
+import { config } from '@fortawesome/fontawesome-svg-core'
 
-// config.autoAddCss = false
+config.autoAddCss = false
 
 const navList = [
   { nav: "/", label: "welcome" },
@@ -64,6 +64,21 @@ const MainLayout = ({ children, id }) => {
 
   const [showMenu, setShowMenu] = useState(false)
   const handleClick = () => setShowMenu(!showMenu)
+  const closeMobileMenu = () => setShowMenu(false)
+
+  const maskTransitions = useTransition(showMenu, null, {
+    // from: { position: "absolute", opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  })
+
+  const menuTransitions = useTransition(showMenu, null, {
+    from: { opacity: 0, transform: "translateX(-100%)" },
+    enter: { opacity: 1, transform: "translateY(0%)" },
+    leave: { opacity: 0, transform: "translateX(-100%)" },
+  })
+
+
   
 
   return (
@@ -78,15 +93,8 @@ const MainLayout = ({ children, id }) => {
 
       <div className="App">
 
-        <div>
-        <span className="mobile-menu" onClick={handleClick} role="button" tabIndex={0} onKeyDown={handleClick}>
-				<svg xmlns="http://www.w3.org/2000/svg" className="mobile-icon" width="16" height="16">
-					<g fill="#ffffff" fill-rule="evenodd">
-						<path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
-					</g>
-				</svg>
-			</span>
-        </div>
+     
+
         <section
           id="side-nav"
           
@@ -162,7 +170,34 @@ const MainLayout = ({ children, id }) => {
             </div>
           </section>
         </section>
-        
+
+        <span className="mobile-menu">
+        <FontAwesomeIcon 	          
+          className="mobile-icon"
+          onClick={handleClick}	            
+          icon={faBars}
+        />	            
+        </span>
+
+        {maskTransitions.map(({ item, key, props }) => {
+         return item && (<animated.div
+             key={key}
+             style={props}
+             className="menu-open-bg"
+             onClick={closeMobileMenu}></animated.div>)
+        })}
+
+
+{menuTransitions.map(({ item, key, props }) => {
+  return item && (<animated.div
+    key={key}
+    style={props}
+    className="menu-open-bg"
+    onClick={handleClick}
+    >
+
+</animated.div>)
+ })}
 
 
         <main id="main">
