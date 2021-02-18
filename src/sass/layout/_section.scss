@@ -68,9 +68,16 @@
         padding-bottom: 15px;
         display: none;
         z-index: 50;
-
+        transform: translateY(130%);
+        transition-timing-function: ease-in;
+        transition: 0.2s;
+        
         &.is-active{
             display: block;
+            transition: 0.25s;
+            transition-timing-function: ease-out;
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 

@@ -12,7 +12,7 @@ function Thumbnail({image,technologies,description, link}) {
         <div className="showcase1 row">
             
             <div className="col-6 project-image">
-                <img src={image} style={{width: "100%"}} alt="melineo"/>
+                <Image src={image} style={{width: "100%"}} alt="melineo"/>
             </div>
             
             <div className="col-6">
