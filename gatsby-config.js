@@ -83,7 +83,13 @@ module.exports = {
         sitemap: 'https://www.example.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-asset-path",
+      options: {
+        removeMapFiles: true,
+      },
+    },
     
 
     // this (optional) plugin enables Progressive Web App + Offline functionality

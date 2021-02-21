@@ -2,14 +2,14 @@ import React from "react"
 import Thumbnail from "../components/Thumbnail"
 import MainLayout from "../layouts/MainLayout"
 
-import img from "../images/ava.png"
-import img2 from "../images/swank.png"
-import img3 from "../images/melineo.png"
-import img4 from "../images/webflow.png"
+// import img from "../images/projects/ava.png"
+// import img2 from "../images/projects/swank.png"
+// import img3 from "../images/projects/melineo.png"
+// import img4 from "../images/projects/webflow.png"
 
 const thumbnailData = [
   {
-    img: img,
+    
     id: 1,
     description:
       "Website for a banking industry.",
@@ -22,7 +22,7 @@ const thumbnailData = [
     
   },
   {
-    img: img2,
+    
     id: 2,
     description:
       "Website for a creative company.",
@@ -34,7 +34,7 @@ const thumbnailData = [
       link: "http://swank-creations.com/",  
   },
   {
-    img: img3,
+    
     id: 3,
     description:
       "Solar energy app. Calculates the amount of power needed for your appliaances.",
@@ -46,7 +46,7 @@ const thumbnailData = [
       link: "https://melinoe-solar-calculator.netlify.app/",
   },
   {
-    img: img4,
+    
     id: 4,
     description:
       "A clone of github page",
@@ -58,6 +58,11 @@ const thumbnailData = [
 ]
 
 const Showcase = () => {
+
+ 
+
+
+
   return (
     <MainLayout
       id="showcase"
@@ -72,7 +77,7 @@ const Showcase = () => {
       </div>
       {thumbnailData.map(data => (
         <Thumbnail
-          image={data.img}
+          img={data.img}
           description={data.description}
           technologies={data.technologies}
           link={data.link}

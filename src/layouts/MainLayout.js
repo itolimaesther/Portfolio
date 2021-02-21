@@ -29,11 +29,11 @@ const onPage = (id, navUrl) => {
 
   return pageId === route
 }
-
+// GatsbyImageSharpFixed
 const MainLayout = ({ children, id }) => {
   const data = useStaticQuery(graphql`
     query {
-      logoGatsbyImage: file(relativePath: { eq: "logo.png" }) {
+      logoGatsbyImage: file(relativePath: {eq: "logo.png"}) {
         id
         childImageSharp {
           fixed(width: 100) {
