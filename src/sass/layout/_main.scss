@@ -72,10 +72,6 @@
       .profile-image {
         height: 100%;
         width: 100%;
-        // object-fit: contain;
-        // background-image: url(../../images/author.png);
-        // background-position: center;
-        // background-repeat: no-repeat;
         background-size: contain;
       }
     }
@@ -145,10 +141,7 @@
 
       .accordion-item {
         background-color: $color-white;
-        // border-radius: .4rem;
-        // margin-bottom: 3rem;
         padding: 1rem;
-        // border: 2px solid #1a292d;
 
         &:target .accordion-link .fa-angle-right {
           display: block;
@@ -284,17 +277,16 @@
           margin-top: 2rem !important;
         }
       }
-      .l-grid-right {
-        // margin-top: 1rem !important;
+      // .l-grid-right {
 
-        &.profile-image {
-          height: 100%;
-          background-image: url(../../images/author.png);
-          background-position: top;
-          background-repeat: no-repeat;
-          background-size: contain !important;
-        }
-      }
+      //   &.profile-image {
+      //     height: 100%;
+      //     background-image: url(../../images/author.png);
+      //     background-position: top;
+      //     background-repeat: no-repeat;
+      //     background-size: contain !important;
+      //   }
+      // }
 
       .grid {
         position: absolute;

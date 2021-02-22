@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout"
 
 
 const Talks = () => {
-  
+
   const talkEntry = [
 
     { 

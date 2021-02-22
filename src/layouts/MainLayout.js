@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import { Helmet as Head } from "react-helmet"
 import SEO from "../components/seo"
@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { useTransition, animated } from "react-spring"
 import { config } from "@fortawesome/fontawesome-svg-core"
+import 'aos/dist/aos.css'
 
 
 config.autoAddCss = false
@@ -76,6 +77,29 @@ const MainLayout = ({ children, id }) => {
     enter: { opacity: 1, transform: "translateY(0%)" },
     leave: { opacity: 0, transform: "translateX(-100%)" },
   })
+
+
+
+  let AOS;
+
+  useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    const AOS = require("aos");
+    AOS.init({
+      once: true,
+    });
+  }, []);
+  
+  
+    useEffect(() => {
+      if (AOS) {
+        AOS.refresh();
+      }
+    });
 
   return (
     <div className="container-wrapper">
