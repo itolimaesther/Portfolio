@@ -3,12 +3,12 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import { Helmet as Head } from "react-helmet"
 import SEO from "../components/seo"
 import "../sass/main.scss"
-
 import Img from "gatsby-image/withIEPolyfill"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { useTransition, animated } from "react-spring"
 import { config } from "@fortawesome/fontawesome-svg-core"
+
 
 config.autoAddCss = false
 

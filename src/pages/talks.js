@@ -1,21 +1,9 @@
 import React from "react"
-// import {talkEntry} from "../components/TalkItems"
 import MainLayout from "../layouts/MainLayout"
 
 
 const Talks = () => {
-  // const [clicked, setClicked] = useState(false);
-
-  // const toggle = index => {
-  //   if (clicked === index) {
-  //     //if clicked question is already active, then close it
-  //     return setClicked(null);
-  //   }
-
-  //   setClicked(index);
-  // };
-
-
+  
   const talkEntry = [
 
     { 
@@ -62,7 +50,7 @@ const Talks = () => {
       <div className="container">
         {talkEntry.map((item, index) => {
           return (
-            <div className="accordion" role = "button" tabIndex="0" key={index}>
+            <div className="accordion" data-aos="fade-up" data-aos-duration="3000" role = "button" tabIndex="0" key={index}>
             <div className="accordion-item" id="question1" >
 
               <h4>{ item.date }</h4>
