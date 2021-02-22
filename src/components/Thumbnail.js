@@ -25,6 +25,12 @@ function Thumbnail({ img, technologies, description, link }) {
     }
   `)
 
+
+  const image = data.ProjectImgs.edges.map(n => {
+    console.log(n.node.childImageSharp.fixed)
+    return n.node.childImageSharp.fixed
+  })
+
   const techItems = technologies.map((list, index) => (
     <li className="technologies-list" key={index}>
       {" "}
@@ -36,16 +42,12 @@ function Thumbnail({ img, technologies, description, link }) {
     <div className="showcase w-80" data-target="showcase">
       <div className="showcase1 row">
         <div className="col-6 project-image">
-          {data.ProjectImgs.edges.map(n => {
-            console.log(n.node.childImageSharp.fixed)
-            return (
+          
               <Img
-                fixed={n.node.childImageSharp.fixed}
+                fixed={image}
                 style={{ width: "100%" }}
                 alt="Project Images"
               />
-            )
-          })}
         </div>
 
         <div className="col-6">

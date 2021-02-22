@@ -71,9 +71,11 @@
     .l-grid-right {
       .profile-image {
         height: 100%;
-        background-image: url(../../images/author.png);
-        background-position: top;
-        background-repeat: no-repeat;
+        width: 100%;
+        // object-fit: contain;
+        // background-image: url(../../images/author.png);
+        // background-position: center;
+        // background-repeat: no-repeat;
         background-size: contain;
       }
     }

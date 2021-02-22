@@ -8,7 +8,7 @@ import Img from "gatsby-image/withIEPolyfill"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { useTransition, animated } from "react-spring"
-import { config } from '@fortawesome/fontawesome-svg-core'
+import { config } from "@fortawesome/fontawesome-svg-core"
 
 config.autoAddCss = false
 
@@ -33,7 +33,7 @@ const onPage = (id, navUrl) => {
 const MainLayout = ({ children, id }) => {
   const data = useStaticQuery(graphql`
     query {
-      logoGatsbyImage: file(relativePath: {eq: "logo.png"}) {
+      logoGatsbyImage: file(relativePath: { eq: "logo.png" }) {
         id
         childImageSharp {
           fixed(width: 100) {
@@ -67,7 +67,6 @@ const MainLayout = ({ children, id }) => {
   const closeMobileMenu = () => setShowMenu(false)
 
   const maskTransitions = useTransition(showMenu, null, {
-    // from: { position: "absolute", opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
   })
@@ -77,9 +76,6 @@ const MainLayout = ({ children, id }) => {
     enter: { opacity: 1, transform: "translateY(0%)" },
     leave: { opacity: 0, transform: "translateX(-100%)" },
   })
-
-
-  
 
   return (
     <div className="container-wrapper">
@@ -92,15 +88,9 @@ const MainLayout = ({ children, id }) => {
       </Head>
 
       <div className="App">
-
-     
-
         <section
           id="side-nav"
-          
-          className={
-            showMenu ? "side-nav is-active": "side-nav"
-          }
+          className={showMenu ? "side-nav is-active" : "side-nav"}
           style={{
             background: "#1a292d",
             height: "100%",
@@ -172,33 +162,38 @@ const MainLayout = ({ children, id }) => {
         </section>
 
         <span className="mobile-menu">
-        <FontAwesomeIcon 	          
-          className="mobile-icon"
-          onClick={handleClick}	            
-          icon={faBars}
-        />	            
+          <FontAwesomeIcon
+            className="mobile-icon"
+            onClick={handleClick}
+            icon={faBars}
+          />
         </span>
 
         {maskTransitions.map(({ item, key, props }) => {
-         return item && (<animated.div
-             key={key}
-             style={props}
-             className="menu-open-bg"
-             onClick={closeMobileMenu}></animated.div>)
+          return (
+            item && (
+              <animated.div
+                key={key}
+                style={props}
+                className="menu-open-bg"
+                onClick={closeMobileMenu}
+              ></animated.div>
+            )
+          )
         })}
 
-
-{menuTransitions.map(({ item, key, props }) => {
-  return item && (<animated.div
-    key={key}
-    style={props}
-    className="menu-open-bg"
-    onClick={handleClick}
-    >
-
-</animated.div>)
- })}
-
+        {menuTransitions.map(({ item, key, props }) => {
+          return (
+            item && (
+              <animated.div
+                key={key}
+                style={props}
+                className="menu-open-bg"
+                onClick={handleClick}
+              ></animated.div>
+            )
+          )
+        })}
 
         <main id="main">
           {/* Main  Content */}

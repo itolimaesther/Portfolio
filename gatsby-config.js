@@ -8,6 +8,8 @@ module.exports = {
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
+  assetPrefix: `/assets/${Date.now().toString()}`,
+  // assetPrefix: `https://cdn.example.com`,
   flags : { DEV_SSR: true},
   plugins: [
     `gatsby-plugin-fontawesome-css`,
@@ -87,7 +89,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-asset-path",
       options: {
-        removeMapFiles: true,
+        // paths: ["static"],
+        removeMapFiles: true
       },
     },
     

@@ -1,8 +1,24 @@
 import React from "react"
 import WelcomeItems from "../components/WelcomeItems"
 import MainLayout from "../layouts/MainLayout"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image/withIEPolyfill"
 
 const Welcome = () => {
+
+  const coverImageData = useStaticQuery(graphql`
+  query {
+    coverImage: file(relativePath: {eq: "author.png"}) {
+      childImageSharp {
+        fixed(width: 600) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`)
+
+
   return (
     <MainLayout id="index-page">
       <div className="grid l-grid-height">
@@ -14,7 +30,13 @@ const Welcome = () => {
           />
         </div>
         <div className="l-grid-right">
-          <div className="profile-image" />
+          <Img fixed={coverImageData.coverImage.childImageSharp.fixed} 
+            // objectFit="cover"
+            styles={{objectFit: "cover"}}
+            objectPosition="50% 50%"
+            alt="Cover Image"
+            className="profile-image"
+          />
         </div>
       </div>
     </MainLayout>
