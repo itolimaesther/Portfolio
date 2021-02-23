@@ -8,8 +8,7 @@ module.exports = {
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
-  assetPrefix: `/assets/${Date.now().toString()}`,
-  // assetPrefix: `https://cdn.example.com`,
+  assetPrefix: "https://example.com/_assets/",
   flags : { DEV_SSR: true},
   plugins: [
     `gatsby-plugin-fontawesome-css`,
@@ -63,8 +62,8 @@ module.exports = {
         name: `GatsbyJS`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#202020`,
+        theme_color: `#202020`,
         display: `minimal-ui`,
         icon: `src/images/favicon_io/favicon-32x32.png`,
         icon_options: {
@@ -89,7 +88,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-asset-path",
       options: {
-        // paths: ["static"],
         removeMapFiles: true
       },
     },
