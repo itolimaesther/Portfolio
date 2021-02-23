@@ -24,25 +24,3 @@ exports.createSchemaCustomization = ({ actions }) => {
     createTypes(typeDefs)
   }
 
-
-  // exports.createResolvers = ({ createResolvers }) => {
-  //   const resolvers = {
-  //     Query: {
-  //       contributorsWithSwag: {
-  //         type: ["ContributorJson"],
-  //         resolve(source, args, context, info) {
-  //           return context.nodeModel.runQuery({
-  //             query: {
-  //               filter: {
-  //                 receivedSwag: { eq: true },
-  //               },
-  //             },
-  //             type: "ContributorJson",
-  //             firstOnly: false,
-  //           })
-  //         },
-  //       },
-  //     },
-  //   }
-  //   createResolvers(resolvers)
-  // }
