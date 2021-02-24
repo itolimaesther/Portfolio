@@ -8,7 +8,11 @@ module.exports = {
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
+<<<<<<< HEAD
   assetPrefix: "assets/",
+=======
+  assetPrefix: "/assests",
+>>>>>>> 9b1e7703f59c5b2eb9fbeaa1e1162d9ebcdfea0c
   flags : { DEV_SSR: true},
   plugins: [
     `gatsby-plugin-fontawesome-css`,
