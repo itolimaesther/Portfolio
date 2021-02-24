@@ -10,9 +10,6 @@
     overflow-x: hidden;
     margin: 0;
 
-    
-
-
     &.l-bg-color{
         background: $color-primary;
         height: 100%;
@@ -61,7 +58,6 @@
 
 
     #side-nav, .side-nav{
-        // display: block !important;
         max-width: 100% !important;
         width: 66% !important;
         flex: none !important;
