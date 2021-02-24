@@ -87,6 +87,9 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-asset-path",
+      options: {
+        removeMapFiles: true
+      },
     },
     {
       resolve: "gatsby-plugin-no-sourcemaps",
