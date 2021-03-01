@@ -8,7 +8,6 @@ module.exports = {
     siteUrl: `https://www.example.com`,
     twitterUsername: "@Ur_melanin_dev",
   },
-  assetPrefix: "assets/",
   flags : { DEV_SSR: true},
   plugins: [
     `gatsby-plugin-fontawesome-css`,
@@ -84,12 +83,6 @@ module.exports = {
         sitemap: 'https://www.example.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
-    },
-    {
-      resolve: "gatsby-plugin-asset-path",
-      options: {
-        removeMapFiles: true
-      },
     },
     {
       resolve: "gatsby-plugin-no-sourcemaps",
