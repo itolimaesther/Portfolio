@@ -10,8 +10,8 @@ const Welcome = () => {
   query {
     coverImage: file(relativePath: {eq: "author.png"}) {
       childImageSharp {
-        fixed(width: 600) {
-          ...GatsbyImageSharpFixed_withWebp
+        fluid(maxWidth: 600, quality: 100) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -22,7 +22,7 @@ const Welcome = () => {
   return (
     <MainLayout id="index-page">
       <div className="grid l-grid-height">
-        <div className="l-grid-left bg-color l-height-100 d-flex flex-direction u-padding">
+        <div className="l-grid-left bg-color l-height-100 d-flex flex-direction">
           <WelcomeItems
             greet = "Hi, I'm Esther."
             stack="Front-End Developer"
@@ -30,8 +30,7 @@ const Welcome = () => {
           />
         </div>
         <div className="l-grid-right">
-          <Img fixed={coverImageData.coverImage.childImageSharp.fixed} 
-            // objectFit="cover"
+          <Img fluid={coverImageData.coverImage.childImageSharp.fluid} 
             styles={{objectFit: "cover"}}
             objectPosition="50% 50%"
             alt="Cover Image"

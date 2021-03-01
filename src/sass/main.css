@@ -296,6 +296,7 @@ ul, ol {
 
 .container-wrapper #main .l-grid-left {
   height: 100vh;
+  padding: 1rem 1rem 0rem 1rem;
 }
 
 .container-wrapper #main .l-grid-left.bg-color {
@@ -338,14 +339,6 @@ ul, ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.container-wrapper #main .l-grid-right .profile-image {
-  height: 100%;
-  background-image: url(../../images/author.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .container-wrapper #main .showcase1 {
@@ -501,6 +494,7 @@ ul, ol {
   max-height: 20rem;
 }
 
+
 @media (max-width: 760px) {
   .container-wrapper .mobile-menu {
     font-size: 25px;
@@ -563,11 +557,7 @@ ul, ol {
     margin-top: 2rem !important;
   }
   .container-wrapper #main .l-grid-right.profile-image {
-    height: 100%;
-    background-image: url(../../images/author.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain !important;
+    width: 100%;
   }
   .container-wrapper #main .grid {
     position: absolute;
@@ -603,6 +593,7 @@ ul, ol {
   .container {
     margin-top: 35px;
   }
+
 }
 
 /* ----------- iPad Pro 10.5" ----------- */

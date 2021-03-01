@@ -67,14 +67,7 @@
       align-content: center;
       align-items: center;
     }
-  
-    .l-grid-right {
-      .profile-image {
-        height: 100%;
-        width: 100%;
-        background-size: contain;
-      }
-    }
+
   
     // Projects
   
@@ -209,6 +202,43 @@
   }
 }
 
+
+/* 404 page */
+
+.not-found-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.not-found-page .not-found-page__image{
+  width: 300px;
+}
+
+.not-found-page__info{
+  width: 540px;
+}
+
+.not-found-page__info h1{
+  font-size: 200px;
+  margin-bottom: 0px;
+  line-height: 185px;
+}
+
+.not-found-page__info h3{
+  font-size: 35px;
+}
+
+.not-found-page__info p a{
+  color: #b3013a;
+}
+
+.not-found-wraper{
+    margin: 10px;
+}
+
 // Phone media query
 @media (max-width: 760px) {
   .container-wrapper {
@@ -251,6 +281,7 @@
       .showcase-wrapper, .talks-wrapper{
         margin-top: 54px;
       }
+
 
       .l-grid-left {
         max-width: 100%;
@@ -312,6 +343,32 @@
 
   .container {
     margin-top: 35px;
+  }
+
+  .not-found-page{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .not-found-page__info{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .not-found-page__info h1{
+    width: 100%;
+    font-size: 160px;
+    margin-top: 0px;
+  }
+
+  .not-found-page__info h3{
+    font-size: 25px;
+  }
+
+  .not-found-page .not-found-page__image{
+    width: 218px;
+    margin: 0 auto;
   }
 }
 

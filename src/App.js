@@ -2,6 +2,7 @@ import React from 'react';
 import './sass/main.scss';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import MainLayout from './layouts/MainLayout.js';
+import NotFound from "./pages/404"
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/talks">
             <Talks />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </MainLayout>
