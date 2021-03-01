@@ -36,8 +36,8 @@ const NotFound = () => {
         <div className="not-found-page__info">
           <h1>404</h1>
           <h3>Um. This is awkward</h3>
-          <p>We tried try hard, but couldn't find the page you 
-            were looking for.  You may find what you were looking for in the
+          <p>We tried hard, but couldn't find the page you 
+            were looking for. You may find what you were looking for in the
             <Link to="/"> home page</Link>
           </p>
         </div>
