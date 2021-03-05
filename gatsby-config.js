@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Esther Itolima`,
-    description: `Frontend Developer`,
+    description: `Frontend Developer - Creating seamless user interface`,
     image: `./src/images/logo.png`,
     author: `@esther`,
-    keywords: `frontend developer, web developer, mobile-friendly, user-experience, nigeria`,
+    keywords: `frontend developer, web developer, mobile-friendly, responsive, user-experience, nigeria`,
     siteUrl: `https://www.example.com`,
-    twitterUsername: "@Ur_melanin_dev",
+    twitterUsername: "@qween_esta",
   },
   flags : { DEV_SSR: true},
   plugins: [
@@ -61,8 +61,8 @@ module.exports = {
         name: `GatsbyJS`,
         short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#202020`,
-        theme_color: `#202020`,
+        background_color: `#1a292d`,
+        theme_color: `#1a292d`,
         display: `minimal-ui`,
         icon: `src/images/favicon_io/favicon-32x32.png`,
         icon_options: {
@@ -92,7 +92,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     
-    // `gatsby-plugin-no-javascript`
 
   ],
 }

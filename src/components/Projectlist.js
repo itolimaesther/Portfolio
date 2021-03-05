@@ -1,9 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-// import { node } from 'prop-types';
 
-function Thumbnail({ img, technologies, description, link }) {
+function Projectlist({ img, technologies, description, link }) {
   const data = useStaticQuery(graphql`
     query {
       ProjectImgs: allFile(
@@ -75,4 +74,4 @@ function Thumbnail({ img, technologies, description, link }) {
   )
 }
 
-export default Thumbnail
+export default Projectlist

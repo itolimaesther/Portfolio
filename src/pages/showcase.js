@@ -1,13 +1,8 @@
 import React from "react"
-// import Thumbnail from "../components/Thumbnail"
 import MainLayout from "../layouts/MainLayout"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 
-// import project1 from "../images/projects/ava.png"
-// import project2 from "../images/projects/swank.png"
-// import project3 from "../images/projects/melineo.png"
-// import project4 from "../images/projects/webflow.png"
 
 const projects = [
   {
@@ -72,7 +67,7 @@ const Showcase = () => {
     >
       <div className="showcase-wrapper">
         <div className="projects-header u-center-text text-color-primary w-80">
-          <h1>Major Projects</h1>
+          <h1>Selected Projects</h1>
           <p>
             Here is a selection of projects that i have worked on. Most of my
             works can be found on
@@ -109,8 +104,7 @@ const Showcase = () => {
                     <ul className="technologies">
                       {project.technologies.map((list, index) => (
                         <li className="technologies-list" key={index}>
-                          {" "}
-                          {list}{" "}
+                          {list}
                         </li>
                       ))}
                     </ul>

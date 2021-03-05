@@ -288,6 +288,10 @@
         height: 70%;
         margin: 0 auto;
 
+        .greeting {
+          text-align: center !important;
+        }
+
         &.bg-color {
           height: auto;
         }
