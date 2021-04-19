@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `Esther Itolima`,
-    description: `Frontend Developer - Creating seamless user interface`,
+    description: `Esther Itolima is a Frontend Developer from Lagos, Nigeria that create sleek and appealing web application with seamless user interface. She is also community builder`,
     image: `./src/images/logo.png`,
     author: `@esther`,
-    keywords: `frontend developer, web developer, mobile-friendly, responsive, user-experience, nigeria`,
+    keywords: `Frontend Developer in Nigeria, Nigerian Female Software Developer, Nigerian Female Web Developer, Community Manager, Web Developer in Nigeria, Nigeria Software Developer`,
     siteUrl: `https://www.example.com`,
     twitterUsername: "@qween_esta",
   },
@@ -58,8 +58,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Esther Itolima`,
+        short_name: `itolimaesther.netlify.app`,
         start_url: `/`,
         background_color: `#1a292d`,
         theme_color: `#1a292d`,
@@ -79,8 +79,8 @@ module.exports = {
     {
     resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.example.com',
-        sitemap: 'https://www.example.com/sitemap.xml',
+        host: 'https://itolimaesther.netlify.app',
+        sitemap: 'https://itolimaesther.netlify.app/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
